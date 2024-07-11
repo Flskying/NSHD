@@ -2,13 +2,13 @@
 #include <Adafruit_Sensor.h>
 #include "Adafruit_AHTX0.h"
 
-#define SDA_PIN 8 // 定义SDA引脚
-#define SCL_PIN 9 // 定义SCL引脚
+#define SDA_PIN 7 // 定义SDA引脚
+#define SCL_PIN 6 // 定义SCL引脚
 //const int SDA_PIN=D4;
 //const int SCL_PIN=D3;
 Adafruit_AHTX0 aht = Adafruit_AHTX0();
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   Wire.begin(SDA_PIN, SCL_PIN); // 初始化I2C总线
   if (!aht.begin()) {
     while (1);
